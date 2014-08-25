@@ -1,0 +1,1140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--(C) EBA-->
+<xbrli:xbrl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:find="http://www.eurofiling.info/xbrl/ext/filing-indicators" xmlns:eba_dim="http://www.eba.europa.eu/xbrl/crr/dict/dim" xmlns:eba_MC="http://www.eba.europa.eu/xbrl/crr/dict/dom/MC" xmlns:eba_AP="http://www.eba.europa.eu/xbrl/crr/dict/dom/AP" xmlns:eba_EC="http://www.eba.europa.eu/xbrl/crr/dict/dom/EC" xmlns:eba_TR="http://www.eba.europa.eu/xbrl/crr/dict/dom/TR" xmlns:eba_typ="http://www.eba.europa.eu/xbrl/crr/dict/typ" xmlns:eba_met="http://www.eba.europa.eu/xbrl/crr/dict/met" xmlns:eba_BA="http://www.eba.europa.eu/xbrl/crr/dict/dom/BA">
+  <link:schemaRef xlink:type="simple" xlink:href="http://www.eba.europa.eu/eu/fr/xbrl/crr/fws/corep/its-2013-02/2013-09-18/mod/corep_conpru.xsd" />
+  <xbrli:unit id="uEUR">
+    <xbrli:measure>iso4217:EUR</xbrli:measure>
+  </xbrli:unit>
+  <xbrli:unit id="uPURE">
+    <xbrli:measure>xbrli:pure</xbrli:measure>
+  </xbrli:unit>
+  <xbrli:context id="c1">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+  </xbrli:context>
+  <find:fIndicators>
+    <find:filingIndicator contextRef="c1">C_10.02</find:filingIndicator>
+  </find:fIndicators>
+  <xbrli:context id="c2">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>1</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c2">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c2">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c2">900900005001.00</eba_met:mi115>
+  <xbrli:context id="c3">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>2</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c3">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c3">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c3">900900005002.00</eba_met:mi115>
+  <xbrli:context id="c4">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>3</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c4">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c4">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c4">900900005003.00</eba_met:mi115>
+  <xbrli:context id="c5">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>4</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c5">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c5">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c5">900900005004.00</eba_met:mi115>
+  <xbrli:context id="c6">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>5</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c6">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c6">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c6">900900005005.00</eba_met:mi115>
+  <xbrli:context id="c7">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>6</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c7">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c7">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c7">900900005006.00</eba_met:mi115>
+  <xbrli:context id="c8">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>7</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c8">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c8">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c8">900900005007.00</eba_met:mi115>
+  <xbrli:context id="c9">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>8</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c9">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c9">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c9">900900005008.00</eba_met:mi115>
+  <xbrli:context id="c10">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>9</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c10">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c10">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c10">900900005009.00</eba_met:mi115>
+  <xbrli:context id="c11">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>10</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c11">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c11">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c11">900900005010.00</eba_met:mi115>
+  <xbrli:context id="c12">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>11</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c12">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c12">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c12">900900005011.00</eba_met:mi115>
+  <xbrli:context id="c13">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>12</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c13">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c13">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c13">900900005012.00</eba_met:mi115>
+  <xbrli:context id="c14">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>13</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c14">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c14">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c14">900900005013.00</eba_met:mi115>
+  <xbrli:context id="c15">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>14</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c15">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c15">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c15">900900005014.00</eba_met:mi115>
+  <xbrli:context id="c16">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>15</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c16">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c16">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c16">900900005015.00</eba_met:mi115>
+  <xbrli:context id="c17">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>16</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c17">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c17">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c17">900900005016.00</eba_met:mi115>
+  <xbrli:context id="c18">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>17</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c18">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c18">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c18">900900005017.00</eba_met:mi115>
+  <xbrli:context id="c19">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>18</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c19">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c19">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c19">900900005018.00</eba_met:mi115>
+  <xbrli:context id="c20">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>19</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c20">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c20">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c20">900900005019.00</eba_met:mi115>
+  <xbrli:context id="c21">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>20</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c21">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c21">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c21">900900005020.00</eba_met:mi115>
+  <xbrli:context id="c22">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>21</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c22">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c22">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c22">900900005021.00</eba_met:mi115>
+  <xbrli:context id="c23">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>22</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c23">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c23">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c23">900900005022.00</eba_met:mi115>
+  <xbrli:context id="c24">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>23</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c24">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c24">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c24">900900005023.00</eba_met:mi115>
+  <xbrli:context id="c25">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>24</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c25">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c25">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c25">900900005024.00</eba_met:mi115>
+  <xbrli:context id="c26">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>25</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c26">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c26">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c26">900900005025.00</eba_met:mi115>
+  <xbrli:context id="c27">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>26</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:pi187 unitRef="uPURE" decimals="4" contextRef="c27">0.1234</eba_met:pi187>
+  <eba_met:pi128 unitRef="uPURE" decimals="4" contextRef="c27">0.1234</eba_met:pi128>
+  <eba_met:mi115 unitRef="uEUR" decimals="-3" contextRef="c27">900900005026.00</eba_met:mi115>
+  <xbrli:context id="c28">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>1</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c28">900200005001.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c28">900600005001.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c28">900800005001.00</eba_met:mi212>
+  <xbrli:context id="c29">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>2</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c29">900200005002.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c29">900600005002.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c29">900800005002.00</eba_met:mi212>
+  <xbrli:context id="c30">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>3</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c30">900200005003.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c30">900600005003.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c30">900800005003.00</eba_met:mi212>
+  <xbrli:context id="c31">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>4</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c31">900200005004.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c31">900600005004.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c31">900800005004.00</eba_met:mi212>
+  <xbrli:context id="c32">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>5</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c32">900200005005.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c32">900600005005.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c32">900800005005.00</eba_met:mi212>
+  <xbrli:context id="c33">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>6</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c33">900200005006.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c33">900600005006.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c33">900800005006.00</eba_met:mi212>
+  <xbrli:context id="c34">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>7</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c34">900200005007.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c34">900600005007.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c34">900800005007.00</eba_met:mi212>
+  <xbrli:context id="c35">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>8</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c35">900200005008.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c35">900600005008.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c35">900800005008.00</eba_met:mi212>
+  <xbrli:context id="c36">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>9</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c36">900200005009.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c36">900600005009.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c36">900800005009.00</eba_met:mi212>
+  <xbrli:context id="c37">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>10</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c37">900200005010.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c37">900600005010.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c37">900800005010.00</eba_met:mi212>
+  <xbrli:context id="c38">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>11</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c38">900200005011.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c38">900600005011.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c38">900800005011.00</eba_met:mi212>
+  <xbrli:context id="c39">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>12</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c39">900200005012.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c39">900600005012.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c39">900800005012.00</eba_met:mi212>
+  <xbrli:context id="c40">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>13</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c40">900200005013.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c40">900600005013.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c40">900800005013.00</eba_met:mi212>
+  <xbrli:context id="c41">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>14</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c41">900200005014.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c41">900600005014.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c41">900800005014.00</eba_met:mi212>
+  <xbrli:context id="c42">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>15</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c42">900200005015.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c42">900600005015.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c42">900800005015.00</eba_met:mi212>
+  <xbrli:context id="c43">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>16</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c43">900200005016.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c43">900600005016.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c43">900800005016.00</eba_met:mi212>
+  <xbrli:context id="c44">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>17</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c44">900200005017.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c44">900600005017.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c44">900800005017.00</eba_met:mi212>
+  <xbrli:context id="c45">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>18</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c45">900200005018.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c45">900600005018.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c45">900800005018.00</eba_met:mi212>
+  <xbrli:context id="c46">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>19</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c46">900200005019.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c46">900600005019.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c46">900800005019.00</eba_met:mi212>
+  <xbrli:context id="c47">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>20</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c47">900200005020.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c47">900600005020.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c47">900800005020.00</eba_met:mi212>
+  <xbrli:context id="c48">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>21</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c48">900200005021.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c48">900600005021.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c48">900800005021.00</eba_met:mi212>
+  <xbrli:context id="c49">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>22</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c49">900200005022.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c49">900600005022.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c49">900800005022.00</eba_met:mi212>
+  <xbrli:context id="c50">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>23</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c50">900200005023.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c50">900600005023.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c50">900800005023.00</eba_met:mi212>
+  <xbrli:context id="c51">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>24</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c51">900200005024.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c51">900600005024.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c51">900800005024.00</eba_met:mi212>
+  <xbrli:context id="c52">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>25</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c52">900200005025.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c52">900600005025.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c52">900800005025.00</eba_met:mi212>
+  <xbrli:context id="c53">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://www.eba.europa.eu/fr/dummy">DUMMY</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2013-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="eba_dim:BAS">eba_BA:x9</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MCY">eba_MC:x193</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:APR">eba_AP:x27</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:EXC">eba_EC:x1</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:TRI">eba_TR:x32</xbrldi:explicitMember>
+      <xbrldi:explicitMember dimension="eba_dim:MRW">eba_AP:x34</xbrldi:explicitMember>
+      <xbrldi:typedMember dimension="eba_dim:OGR">
+        <eba_typ:ID>26</eba_typ:ID>
+      </xbrldi:typedMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <eba_met:mi180 unitRef="uEUR" decimals="-3" contextRef="c53">900200005026.00</eba_met:mi180>
+  <eba_met:mi119 unitRef="uEUR" decimals="-3" contextRef="c53">900600005026.00</eba_met:mi119>
+  <eba_met:mi212 unitRef="uEUR" decimals="-3" contextRef="c53">900800005026.00</eba_met:mi212>
+</xbrli:xbrl>

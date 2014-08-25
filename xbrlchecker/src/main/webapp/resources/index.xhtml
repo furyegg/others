@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui">
+<h:head>
+    <!--<meta charset="utf-8">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="description" content=""></meta>
+    <meta name="author" content=""></meta>
+    <link rel="shortcut icon" href="img/lr-favicon.ico"></link>
+    <title>Lombard Risk EBA XBRL Checker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"></link>
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet"></link>
+
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'></link>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <o:conditionalComment if="lt IE 9">
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
+    </o:conditionalComment>
+</h:head>
+
+<h:body>
+<div class="lr-wrapper" id="header">
+<div class="lr-header">
+        <div class="container">
+
+            <h1 onclick="window.location.href = 'http://www.lombardrisk.com/products/regulatory-compliance/reporter/reporter-cloud-corep-xbrl';"
+                class="lr-logo" style="cursor: pointer; position: relative; z-index: 999;">Lombard Risk</h1>
+
+            <h2 class="project">EBA XBRL Checker</h2>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: -32px">
+<div class="row">
+<div class="col-md-9">
+<div class="page-header">
+    <h1 class="main-heading" style="color: #5F88C6; background-color: #ffffff; text-shadow: none">
+        Demystify your XBRL validation errors in two steps</h1>
+</div>
+
+<div class="row first-step-seperation" id="firstRow">
+<div class="col-sm-7 col-md-7"><!-- col-sm-offset-3 col-md-offset-3 col-sm-6 col-md-6 -->
+        <p class="lead"><span class="label label-info">1</span> Enter your email address</p>
+
+        <div id="emailDiv" class="form-group has-feedback">
+
+            <!--
+
+            USE THE FOLLOWING CLASSES FOR THE REQUIRED ALERT ON INPUTS
+
+            has-success
+
+            has-warning
+
+            has-error
+
+            AND USE THE CLASSES BELOW FOR ICON CHANGES
+
+            glyphicon-ok
+
+            glyphicon-warning-sign
+
+            glyphicon-remove
+
+            -->
+            <f:metadata>
+                <f:viewParam name="email"
+                             value="#{xbrlCheckerController.emailAddress}" />
+                <f:event type="preRenderView" listener="#{xbrlCheckerController.checkEmailAddressInit}"/>
+            </f:metadata>
+            <h:form id="emailForm">
+                <label class="sr-only" for="exampleInputEmail1">Email address</label>
+                <p:inputText styleClass="input-lg form-control" id="exampleInputEmail1"
+                             placeholder="Enter email"
+                             value="#{xbrlCheckerController.emailAddress}">
+                    <p:ajax event="keyup" listener="#{xbrlCheckerController.checkEmailAddress}"
+                            update=":registerPanelForm :submitForm :errorCodeForm emailTickPanel"
+                            oncomplete="updatePanel($('#emailDiv'), $('#emailTick'));
+                                $('#registerPanelForm\\:registerPanel').css('display','block');
+                            $('#registerPanelForm\\:registerPanelConfirm').css('display','none');"/>
+                </p:inputText>
+
+                <p:panel id="emailTickPanel" style="border: none; background: none repeat scroll 0 0 rgba(0, 0, 0, 0);">
+               <span id="emailTick" class="glyphicon form-control-feedback
+                                                         #{xbrlCheckerController.emailAddressMatchUser ? 'glyphicon-ok' : xbrlCheckerController.emailAddressValid ? 'glyphicon-warning-sign' : 'glyphicon-remove'}"
+                     ></span>
+                </p:panel>
+            </h:form>
+        </div>
+    </div>
+
+    <div class="col-sm-5 col-md-5">
+        <h:form id="registerPanelForm">
+            <p:panel styleClass="alert alert-danger" style="height: 96px;" rendered="#{!xbrlCheckerController.emailAddressMatchUser and xbrlCheckerController.emailAddressValid}"
+                     id="registerPanel">
+                <h4>Not registered with us? <br/></h4>
+                <p:commandLink type="button" styleClass="btn btn-default btn-md"
+                               actionListener="#{xbrlCheckerController.emailValidationRequest}"
+                               oncomplete="$('#registerPanelForm\\:registerPanel').css('display','none');
+                            $('#registerPanelForm\\:registerPanelConfirm').css('display','block');"><span
+                        class="glyphicon glyphicon-envelope"></span> Validate your email
+                </p:commandLink>
+            </p:panel>
+            <p:panel styleClass="alert-success"
+                     id="registerPanelConfirm" style="display: none; height: 96px;">
+                <h4 style="color: #3C763D;">The validation message has been sent. Please check your email.</h4>
+            </p:panel>
+        </h:form>
+        <!--<div class="alert alert-danger">-->
+        <!--<h4>Not registered with us? <br />You'll need to validate your email address.</h4>-->
+        <!--<button type="button" class="btn btn-default btn-md"><span class="glyphicon glyphicon-envelope"></span> Validate</button> -->
+        <!--</div> -->
+    </div>
+
+</div>
+
+<h:form id="loginAsForm">
+    <div class="row first-step-seperation invisible" style="height: 50px" id="logedInAs">
+    <div class="col-sm-7 col-md-7" style="width: 100%">
+        <p class="lead"><span class="complete-label glyphicon glyphicon-ok"></span> Your are signed in as #{xbrlCheckerController.emailAddress}</p>
+    </div>
+</div>
+</h:form>
+
+<div class="row">
+
+    <h:form id="errorCodeForm" onkeypress="if (event.keyCode == 13) { document.getElementById('submitForm:submitButton').click(); return false; }">
+        <div class="col-sm-7 col-md-7">
+            <p class="lead"><span class="label label-info">2</span> Enter your error code</p>
+
+            <div id="errorCodeDiv" class="form-group has-feedback">
+                <label class="sr-only" for="exampleInputPassword2">Assertion ID Number</label>
+                <!--<o:conditionalComment if="IE">-->
+                    <input type="text" style="display: none;" disabled="disabled" size="1" />
+                <!--</o:conditionalComment>-->
+                <p:inputText type="text" styleClass="input-lg form-control" id="exampleInputPassword2"
+                             placeholder="eba_v1234_a (for help where to find this, click on '!')" value="#{xbrlCheckerController.errorCode}"
+                             disabled="#{!xbrlCheckerController.emailAddressMatchUser}">
+                    <p:ajax event="keyup" update=":submitForm errorIdTick" listener="#{xbrlCheckerController.checkErrorCode}"
+                            oncomplete="updatePanel($('#errorCodeDiv'), $('#errorCodeTick'));
+                                "/>
+                </p:inputText>
+                <p:panel style="border: none; background: none repeat scroll 0 0 rgba(0, 0, 0, 0);" id="errorIdTick">
+                    <span id="errorCodeTick" class="glyphicon form-control-feedback #{xbrlCheckerController.errorCodeValid ? 'glyphicon-ok' : 'glyphicon-warning-sign'}"
+                          style="cursor: pointer; cursor: hand;"
+                          data-toggle="modal" data-target="#myModal"></span>
+                </p:panel>
+            </div>
+        </div>
+    </h:form>
+
+    <div class="col-sm-5 col-md-5"><!-- col-sm-offset-3 col-md-offset-3 col-sm-6 col-md-6 -->
+        <div class="form-group">
+            <h:form id="submitForm">
+                <p:commandButton id="submitButton" style="margin-top: 42px;"
+                                 styleClass="btn btn-lg col-sm-12 col-md-12 btn-info" value="Submit"
+                                 rendered="#{xbrlCheckerController.showEmailTick and xbrlCheckerController.errorCodeValid}"
+                                 oncomplete="hideEmail();"
+                                 actionListener="#{xbrlCheckerController.submit}"
+                                 update=":resultForm :leaderBoardForm :loginAsForm"/>
+            </h:form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="myModalLabel">To use this service, enter your validation error code as highlighted in <span
+                        style="color:red;">red</span> below from the GABRIEL or CBI website.</h3>
+                <h4 class="" id="myModalLabel">If you are using another submission site other than UK or Ireland, and need to identify your error code&#59; <a href="help.html" >send us a screen
+                    image</a> and we will assist you and update this page.</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <h4 class="super-heading"><a
+                                href="http://www.fca.org.uk/firms/systems-reporting/gabriel/">FCA GABRIEL</a> error code example
+                        </h4>
+
+                        <div class="well">
+                            <table summary="" id="warning-table">
+                                <tbody>
+                                <tr class="warning-row">
+                                    <td>Warning</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="warning-label">
+                                    <td class="warning-small">Error Type</td>
+                                    <td class="warning-large">Error Message</td>
+                                    <td class="warning-medium">Assertion Id</td>
+                                </tr>
+                                <tr class="warning-content">
+                                    <td>Warning</td>
+                                    <td>Value assertion with id ‘eba_v1502_m’ did not satisfy the test expression: “oaf:numeric-less-equal-than($a, $b)”...</td>
+                                    <td><span class="warning-error-code">eba_v1502_m</span></td>
+                                </tr>
+                                <tr class="warning-content">
+                                    <td>Warning</td>
+                                    <td>Value assertion with id ‘eba_v1504_m’ did not satisfy the test expression: “oaf:numeric-less-equal-than($a, $b)”...</td>
+                                    <td><span class="warning-error-code">eba_v150_m</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <h4 class="super-heading"><a
+                                href="http://www.centralbank.ie/">Central Bank of Ireland</a> error code example
+                        </h4>
+
+                        <div class="well" style="height: 257px;">
+                            <img src="img/cbi-error.png" class="img-responsive"
+                                 alt="Bank of Ireland error code example"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+            -->
+
+        </div>
+    </div>
+</div>
+
+<h:form id="resultForm">
+    <p:panel styleClass="row" id="resultPanel" style="border: none">
+        <p:panel styleClass="results-wrapper" rendered="#{xbrlCheckerController.validationInfo != null}"
+                 style="border: none; background-color: #D9EDF7;">
+            <table class="reference" style="width:100%; table-layout: fixed; word-break: break-all;">
+                <tbody>
+                <tr>
+                    <th style="width: 130px;">Error Code</th>
+                    <th>Validation Scope</th>
+                    <th style="width: 20px"></th>
+                    <th>Validation Formula</th>
+                </tr>
+                <tr>
+                    <td>#{xbrlCheckerController.validationInfo.code}</td>
+                    <td>#{xbrlCheckerController.validationInfo.rawScope}</td>
+                    <td></td>
+                    <td>#{xbrlCheckerController.validationInfo.formula}</td>
+                </tr>
+                </tbody>
+            </table>
+            <h:dataTable  var="returnInfo" value="#{xbrlCheckerController.returnInfoList}"
+                          style="width:100%; table-layout: auto; margin-top: 12px; word-break: break-all;"
+                          columnClasses="width130px,emptyClass"
+                    >
+
+                <h:column>
+                    <f:facet name="header">Return Code</f:facet>
+                    <h:outputText value="#{returnInfo.code}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Return Name</f:facet>
+                    <h:outputText value="#{returnInfo.label}" />
+                </h:column>
+            </h:dataTable>
+            <p:panel rendered="#{xbrlCheckerController.validationInfo.deactivated}" style="margin-top: 15px;">
+                <h:outputText value="This rule has been deactivated by the European Banking Authority" style="color: red; font-weight: bold"/>
+            </p:panel>
+            <p:panel id="emailConfirmation" styleClass="well" style="display: none; border: none; margin-top: 12px;">
+                <p style="font-weight: bold">Additional information was sent to your email!</p>
+            </p:panel>
+            <p:panel id="emailPanel" styleClass="well" rendered="#{xbrlCheckerController.excelTemplate != null
+    and xbrlCheckerController.emailWasSent==false}"
+                     style="border: none; margin-top: 12px;">
+                <p style="font-weight: bold">We can send you more information</p>
+                <p>We have an Excel template highlighting the validation rule. Would you like a copy sent to #{xbrlCheckerController.emailAddress}?</p>
+                <div style="margin-bottom: 10px"><h:graphicImage value="img/XbrlCheckerExcelSnippet.png" /></div>
+                <h:commandButton  type="button" styleClass="btn btn-primary" value="Don't send it!"
+                                  onclick="$('#resultForm\\:emailPanel').css('display','none');">
+                    <f:ajax event="click" />
+                                  </h:commandButton>
+                &nbsp;
+                <h:commandButton styleClass="btn btn-primary" value="YES, send it!"
+                                 onclick="$('#resultForm\\:emailPanel').css('display','none');
+                                 $('#resultForm\\:emailConfirmation').css('display','block');">
+
+                    <f:ajax event="click" listener="#{xbrlCheckerController.sendEmailTemplate}"/>
+                </h:commandButton>
+            </p:panel>
+            <div style="margin-top: 20px">
+                <a href="feedback.html" class="helpFeedback">Using another submission site other than Ireland or UK, and need to identify your error code&#59; send us a screen image</a>
+            </div>
+        </p:panel>
+    </p:panel>
+</h:form>
+
+</div>
+<h:form id="leaderBoardForm">
+    <div class="col-md-3">
+
+        <div class="page-header">
+            <h1 class="sidebar-heading leaderboard-badge">Leaderboard</h1>
+        </div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Error Code</th>
+                <th scope="col">Count</th>
+            </tr>
+            </thead>
+            <tbody>
+            <ui:repeat value="#{xbrlCheckerController.leaderBoardEntries}" var="entry">
+                <tr>
+                    <td>#{entry.validationId}</td>
+                    <td>#{entry.count}</td>
+                </tr>
+            </ui:repeat>
+            </tbody>
+        </table>
+
+        <div class="xbrl-saver">
+            <h4 style="min-height: 88px">
+            Still having problems with EBA Reporting?
+            <br></br>
+                Click <a href="help.html">here</a> for help!
+        </h4>
+
+        </div>
+
+    </div>
+</h:form>
+</div>
+</div>
+
+<p class="footer-copy">&copy; Lombard Risk Management plc 2014</p>
+<p class="footer-copy"><a href="legal.html">Legal</a><p:spacer width="10px" height="0px"/> <a href="feedback.html">Feedback</a></p>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/docs.min.js"></script>-->
+<script type="text/javascript">
+    function updateErrorCodePanel(){
+        var panel = $('#errorCodeDiv');
+        var tick = $('#errorCodeTick');
+
+        if(tick.hasClass('glyphicon-ok')){
+            panel.removeClass('has-warning');
+            panel.addClass('has-success');
+        }else{
+            panel.removeClass('has-success');
+            panel.addClass('has-warning');
+        }
+    }
+
+    function updatePanel(panel, tick) {
+        if (tick.hasClass('glyphicon-ok')) {
+            panel.removeClass('has-warning');
+            panel.removeClass('has-error');
+            panel.addClass('has-success');
+        }
+        else if (tick.hasClass('glyphicon-remove')) {
+            panel.removeClass('has-warning');
+            panel.removeClass('has-success');
+            panel.addClass('has-error');
+        } else {
+            panel.removeClass('has-success');
+            panel.removeClass('has-error');
+            panel.addClass('has-warning');
+        }
+    }
+
+    function hideEmail(){
+        $('#firstRow').addClass('invisible');
+        $('#logedInAs').removeClass('invisible');
+    }
+
+</script>
+
+<script type='text/javascript'>(function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done &amp;&amp; (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({ c: '9c922076-d0dc-4ad1-bb8d-46f0a3925041', f: true }); done = true; } }; })();</script>
+<script type='text/javascript' src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
+        data-apikey="8b4735bed8d2693e1a5d4eb292525c50"></script>
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-50967551-1', 'lombardrisk.com');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    function setFrameHeight(){
+        var iFrame = parent.document.getElementById('xbrlFrame');
+        if(iFrame !== null) {
+            iFrame.height = document['body'].offsetHeight;
+        }
+    }
+    $(document).ready(function () {
+        if (window != window.top) {
+            $('#header').addClass('invisible');
+        }
+//        setFrameHeight();
+
+    });
+</script>
+<!--<script type="text/javascript">-->
+    <!--if (/msie/i.test (navigator.userAgent)) //only override IE-->
+    <!--{-->
+        <!--document.nativeGetElementById = document.getElementById;-->
+        <!--document.getElementById = function(id)-->
+        <!--{-->
+            <!--var elem = document.nativeGetElementById(id);-->
+            <!--if(elem)-->
+            <!--{-->
+                <!--//make sure that it is a valid match on id-->
+                <!--if(elem.attributes['id'].value == id)-->
+                <!--{-->
+                    <!--return elem;-->
+                <!--}-->
+                <!--else-->
+                <!--{-->
+                    <!--//otherwise find the correct element-->
+                    <!--for(var i=1;i&lt;document.all[id].length;i++)-->
+                    <!--{-->
+                        <!--if(document.all[id][i].attributes['id'].value == id)-->
+                        <!--{-->
+                            <!--return document.all[id][i];-->
+                        <!--}-->
+                    <!--}-->
+                <!--}-->
+            <!--}-->
+            <!--return null;-->
+        <!--};-->
+    <!--}-->
+<!--</script>-->
+
+</h:body>
+</html>

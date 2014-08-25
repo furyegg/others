@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xml:lang="en" lang="en">
+<h:head>
+    <title></title>
+    <!--<style type="text/css">-->
+    <!--.ui-datatable-header{-->
+    <!--background-color: #e7e7e7 !important;-->
+    <!--background-image: none !important;-->
+    <!--}-->
+
+    <!--.ui-datatable-odd{-->
+    <!--background-color: white !important;-->
+    <!--}-->
+
+    <!--.ui-datatable-even{-->
+    <!--background-color: white !important;-->
+    <!--}-->
+    <!--</style>-->
+</h:head>
+
+<body>
+
+<h:form>
+    <div style="margin-bottom: 20px">
+        <div style="float: left">
+            <p:commandButton value="refresh" actionListener="#{adminController.reloadUsers()}"
+                             update="userTable lastRefreshed"/>
+            <p:spacer width="10px" height="0px"/>
+            <h:outputText value="Last refreshed: "/>
+            <h:outputText value="#{adminController.lastRefreshed.time}" id="lastRefreshed">
+                <f:convertDateTime pattern="dd.MM.yyyy HH:mm:ss"/>
+            </h:outputText>
+            <p:spacer width="20px" height="0px"/>
+            <p:commandButton value="Export as XLS" ajax="false">
+                <p:dataExporter type="xls" target="userTable" fileName="users"/>
+            </p:commandButton>
+            <p:spacer width="5px" height="0px"/>
+            <p:commandButton value="Back to Xbrl Checker" action="index.xhtml?faces-redirect=true"/>
+        </div>
+        <div style="float: right">
+
+        </div>
+    </div>
+    <div style="clear: both; padding-top: 20px">
+        <p:dataTable id="userTable" var="user" value="#{adminController.users}">
+            <p:column sortBy="#{user.emailAddress}">
+                <f:facet name="header">
+                    <h:outputText value="Email address"/>
+                </f:facet>
+                <h:outputText value="#{user.emailAddress}"/>
+            </p:column>
+
+            <p:column sortBy="#{user.validationLookupRequests.size()}">
+                <f:facet name="header">
+                    <h:outputText value="Number of validation requests"/>
+                </f:facet>
+                <h:outputText value="#{user.validationLookupRequests.size()}"/>
+            </p:column>
+
+            <p:column sortBy="#{user.validationAttachmentRequests.size()}">
+                <f:facet name="header">
+                    <h:outputText value="number of attachments requested"/>
+                </f:facet>
+                <h:outputText value="#{user.validationAttachmentRequests.size()}"/>
+            </p:column>
+        </p:dataTable>
+    </div>
+</h:form>
+</body>
+</html>

@@ -1,0 +1,1 @@
+insert into UPGRADE_HISTORY values ('${ver}', '${date}');

@@ -1,0 +1,1 @@
+insert into UPGRADE_HISTORY values ('${ver}', to_date('${date}','yyyy-mm-dd'));

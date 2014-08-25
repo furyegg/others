@@ -1,0 +1,1 @@
+select version from upgrade_history where rownum = 1 order by version desc;

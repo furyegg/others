@@ -1,0 +1,16 @@
+<icons>
+	<category name="sales">
+		<icon>http://localhost:8080/</icon>
+		<icon>http://localhost:8080/wps/icons/icon1.png</icon>
+		<icon>http://localhost:8080/wps/icons/icon2.png</icon>
+		<icon>http://localhost:8080/wps/icons/icon3.png</icon>
+		<icon>http://localhost:8080/wps/icons/icon4.png</icon>
+		<icon>http://localhost:8080/wps/icons/fish.png</icon>
+	</category>
+	<category name="promotion">
+		<icon>http://localhost:8080/wps/icons/icon5.png</icon>
+		<icon>http://localhost:8080/wps/icons/icon6.png</icon>
+		<icon>http://localhost:8080/wps/icons/icon7.png</icon>
+		<icon>http://localhost:8080/wps/icons/icon8.png</icon>
+	</category>
+</icons>
